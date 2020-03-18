@@ -15,6 +15,7 @@ export class FormulariosComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    
     this.criarFormularioDeUsuario();
   }
 

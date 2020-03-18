@@ -4,28 +4,24 @@
 <div class="input-field col s6">
     <i class="material-icons prefix">account_circle</i>
     <input type="text" formControlName="nome" class="validate">
-    <label for="nome"> Nome: </label>
+    <label  for="nome"> Nome: </label>
     <!--pristine se o campo ainda não foi modificado -->
     <div *ngIf="!nome.pristine && nome.errors">
-        <p *ngIf="nome.errors.required">
-          Nome é obrigatório.
-        </p>
-        <p *ngIf="nome.errors.minlength">
-          Nome deve ter no mínimo 3 caracters.
-        </p>
-        <p *ngIf="nome.errors.maxlength">
-          Nome deve ter no máximo 100 caracters.
-        </p>
+        <span  *ngIf="nome.errors.required" class="helper-text" data-error="wrong" data-success="right">
+            Nome é obrigatório.</span>
+        <span *ngIf="nome.errors.minlength" class="helper-text" data-error="wrong" data-success="right">
+            Nome deve ter no mínimo 3 caracters.</span>
+        <span  *ngIf="nome.errors.maxlength" class="helper-text" data-error="wrong" data-success="right">
+            Nome deve ter no máximo 100 caracters.</span>
       </div>
 </div>  
 <div class="input-field col s6">
     <i class="material-icons prefix">email</i>
     <input type="text" formControlName="email">
-    <label for="email">E-mail:</label>
+    <label for="email"  >E-mail:</label>
     <div *ngIf="!email.pristine && email.errors">
-        <p *ngIf="email.errors.email">
-          Digite um e-mail válido.
-        </p>
+        <span *ngIf="email.errors.email" class="helper-text" data-error="wrong" data-success="right">
+            Nome deve ter no máximo 100 caracters.</span>
       </div>
 </div>  
 </div>
